@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Búsqueda - Maligno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Panel de Búsqueda -->
+        <div class="search-panel">
+            <h1>🔍 Sistema de Búsqueda</h1>
+            
+            <div class="form-group">
+                <label for="tipo">Tipo de búsqueda:</label>
+                <select id="tipo">
+                    <option value="persona"> Persona (por DNI)</option>
+                    <option value="maquina">⚙️ Máquina (por código)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="identificador">Identificador:</label>
+                <input 
+                    type="text" 
+                    id="identificador" 
+                    placeholder="Ej: 12345678 o M001"
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="buttons">
+                <button onclick="buscar()" class="btn-primary">Buscar</button>
+                <button onclick="obtenerMiUbicacion()" class="btn-secondary">📍 Mi Ubicación</button>
+            </div>
+        </div>
+
+        <!-- Panel de Resultados -->
+        <div id="resultado" class="result-panel" style="display:none;">
+            <h2>📋 Resultados</h2>
+            <div id="contenido"></div>
+        </div>
+
+        <!-- Panel de Error -->
+        <div id="error" class="error-panel" style="display:none;"></div>
+
+        <!-- ... tus inputs y botones ... -->
+<div class="row">
+    <button id="btnBuscar" class="btn-primary">Buscar</button>
+    <button id="btnUbicacion" class="btn-secondary">📍 Mi Ubicación</button>
+</div>
+
+<!-- AGREGA ESTO: Contenedor de resultados -->
+<div id="resultadoBusqueda" class="mt-4" style="display:none;">
+    <!-- Aquí se inyectará la información -->
+</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
