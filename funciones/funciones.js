@@ -1,6 +1,7 @@
 //crear Funcion
 function saludar() {
-    return `Hola, ${'hola mundo'}`;
+    console.log('hola mundo');
+    return 'hola mundo';""
 }
 
 //llamar funcion
